@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Product</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		form {
+			width: 50%;
+			margin: 40px auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input, select {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Add Product</h1>
+	<form action="product.php" method="post" enctype="multipart/form-data">
+		<label for="product_name">Product Name:</label>
+		<input type="text" id="product_name" name="product_name" required>
+
+		<label for="product_description">Product Description:(add product quantity with units)</label>
+		<textarea id="product_description" name="product_description" required></textarea>
+
+		<label for="price">Price:(add product price for the quantity)</label>
+		<input type="number" id="price" name="product_price" required>
+
+		<label for="image">Select Product Image:</label>
+		<input type="file" id="image" name="image" required><br><br>
+
+		<input type="submit" value="Add Product">
+	</form>
+</body>
+</html>
